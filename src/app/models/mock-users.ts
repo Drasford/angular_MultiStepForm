@@ -1,0 +1,59 @@
+import {User} from './user';
+import {Movie} from './movie';
+
+export const USERS: User[] = [
+    {
+        id:1,
+        firstName:'Dame',
+        lastName:'Ivanovski',
+        zipCode:1000,
+        Movies:[
+            {
+                id:1,
+                name:'Troja',
+                posterLink:'nemalin'
+            },
+            {
+                id:2,
+                name:'Kill Bill',
+                posterLink:'link'
+            }
+        ]
+    },
+    {
+        id:2,
+        firstName:'Stanko',
+        lastName:'Stankovski',
+        zipCode:1000,
+        Movies:[
+            {
+                id:3,
+                name:'LOTR',
+                posterLink:'ljnk'
+            },
+            {
+                id:1,
+                name:'Troja',
+                posterLink:'nemalin'
+            }
+        ]
+    },
+    {
+        id:3,
+        firstName:'Mirko',
+        lastName:'Mirkovski',
+        zipCode:1200,
+        Movies:[
+            {
+                id:4,
+                name:'Titanic',
+                posterLink:'link'
+            },
+            {
+                id:5,
+                name:'Goodfellas',
+                posterLink:'link'
+            }
+        ]
+    },
+]

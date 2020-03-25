@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <h1>List of users</h1>
+    <div *ngFor="let user of users; let index = index" class="row text-center">
+     <div class="col-md-1">
+        {{user.id}}
+     </div>
+        <div class="col-md-3">
+        {{user.firstName}} {{user.lastName}}
+        
+        (<button (click)="editUser(user)" [routerLink]="['/step1']" class="btn-sm btn-primary mr-2">Edit</button>
+        <button (click)="deleteUser(index)" class="btn-sm btn-danger">Delete</button>)
+        </div>
+    </div>
+</div>
+

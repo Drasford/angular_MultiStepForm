@@ -1,0 +1,24 @@
+<div class="container">
+   <form [formGroup]="Step2"> 
+     
+
+      <div formArrayName="movies" *ngFor="let movie of movies.controls; let index = index;">
+        <div [formGroupName]="index">
+          <input class="form-control" type="text" placeholder="Movie Name" formControlName="name">
+          <p style="color:red;" *ngIf="!movie.get('name').valid && movie.get('name').dirty">This input is required!</p>
+          <button (click)="removeMovie(index)">Remove this movie</button>
+        </div>
+        <br/>
+      </div>
+      <div class="row">
+          <div class="col-md-1">
+            <button (click)="addMovieField()" class="btn btn-primary"> Add movie</button>
+          </div>
+          <div class="col-md-11">
+            <button (click)="submitForm2()"type="submit" class="btn btn-success">Submit form</button>
+          </div>
+      </div>
+    </form> 
+    <hr/>
+    <button [routerLink]="['/step1']" class="btn btn-primary"> Previous step</button>
+</div>
